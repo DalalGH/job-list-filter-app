@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import jobsData from "./data/jobs.json"; // We'll create this file soon
+import "./App.css";
 
 function App() {
+  const [jobs, setJobs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate loading jobs with a 1 second delay
+  useEffect(() => {
+    setTimeout(() => {
+      setJobs(jobsData);
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
+  // Filter jobs by title based on search term
+  const filteredJobs = jobs.filter((job) =>
+    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Job Listings</h1>
+
+      <input
+        type="text"
+        placeholder="Search job titles..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      {isLoading ? (
+  <div className="spinner-container">
+    <div className="spinner"></div>
+    <p>Loading jobs...</p>
+  </div>
+) : filteredJobs.length === 0 ? (
+        <p>No results found.</p>
+      ) : (
+        <div className="job-list">
+          {filteredJobs.map((job) => (
+            <div key={job.id} className="job-card">
+              <h2>{job.title}</h2>
+              <p><strong>{job.company}</strong></p>
+              <p>{job.location}</p>
+              <p>{job.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

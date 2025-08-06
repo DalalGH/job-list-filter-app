@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+
+/*.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}*/
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
+/* Center the input and job list wrapper */
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center horizontally */
+  gap: 20px;            /* Space between input and job list */
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0;  /* Remove bottom margin to avoid double space */
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center job cards horizontally */
+}
+
+
+.job-card {
+  background: rgba(243, 235, 206, 0.15); /* semi-transparent */
+  border-radius: 8px;
+  flex: 1 1 300px;
+  min-width: 280px;
+  padding: 16px;
+  margin: 1rem 0;
+  backdrop-filter: blur(10px);           /* glass blur effect */
+  -webkit-backdrop-filter: blur(10px);   /* Safari support */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #1e293b; /* elegant text color */
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: scale(1.02);
+}
+
+body {
+  background: linear-gradient(190deg, #ffffff,#a6c3c5, #ffffff);
   min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.spinner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 50vh;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+     #e0e7ff,
+  #cbd5e1,
+  #a5b4fc,
+  #bae6fd,
+  #bbf7d0,
+  #fde68a,
+  #fef9c3,
+  #e0e7ff
+);
+  animation: spin 1s linear infinite;
+}
+
+.spinner::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .job-list {
+    flex-direction: column;
   }
 }

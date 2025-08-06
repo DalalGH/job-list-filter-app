@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechCorp",
+    "location": "London",
+    "description": "Build user interfaces using React."
+  },
+  {
+    "id": 2,
+    "title": "Backend Engineer",
+    "company": "CodeWorks",
+    "location": "Haifa",
+    "description": "Develop server logic with Node.js."
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "DevStart",
+    "location": "Remote",
+    "description": "Work on frontend and backend."
+  },
+  {
+    "id": 4,
+    "title": "QA Tester",
+    "company": "BugSquash",
+    "location": "Jerusalem",
+    "description": "Perform manual testing and report bugs."
+  },
+  {
+  "id": 5,
+  "title": "UX Designer",
+  "company": "Creative Minds",
+  "location": "Tel Aviv",
+  "description": "Design user-friendly interfaces and improve user experience."
+},
+{
+  "id": 6,
+  "title": "Data Analyst",
+  "company": "Data Insights",
+  "location": "Haifa",
+  "description": "Analyze data trends and provide actionable insights."
+},
+{
+  "id": 7,
+  "title": "DevOps Engineer",
+  "company": "CloudWorks",
+  "location": "Remote",
+  "description": "Maintain and improve CI/CD pipelines and cloud infrastructure."
+},
+{
+  "id": 8,
+  "title": "Product Manager",
+  "company": "Innovatech",
+  "location": "Jerusalem",
+  "description": "Lead product development from conception to launch."
+}
+]
