@@ -23,10 +23,11 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Job Listings</h1>
+      <h1><div className="w">Job Listings</div></h1>
 
       <input
         type="text"
+        class="centered-input"
         placeholder="Search job titles..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}

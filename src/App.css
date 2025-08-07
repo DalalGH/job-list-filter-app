@@ -1,26 +1,4 @@
 
-/*.app-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-input {
-  padding: 10px;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.job-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}*/
 .app-container {
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -34,6 +12,20 @@ input {
   flex-direction: column;
   align-items: center;  /* Center horizontally */
   gap: 20px;            /* Space between input and job list */
+}
+.w {
+  text-align: center;
+  color: white;
+}
+.centered-input {
+  display: block;
+  margin: 0 auto;           /* centers horizontally */
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 input {
@@ -55,7 +47,7 @@ input {
 
 
 .job-card {
-  background: rgba(243, 235, 206, 0.15); /* semi-transparent */
+  background: rgba(0, 0, 0, 0.15); /* semi-transparent */
   border-radius: 8px;
   flex: 1 1 300px;
   min-width: 280px;
@@ -65,7 +57,7 @@ input {
   -webkit-backdrop-filter: blur(10px);   /* Safari support */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #1e293b; /* elegant text color */
+  color: #fdfdfd; /* elegant text color */
   transition: transform 0.2s ease;
 }
 
@@ -74,7 +66,7 @@ input {
 }
 
 body {
-  background: linear-gradient(190deg, #ffffff,#a6c3c5, #ffffff);
+  background: linear-gradient(190deg, #e7c337,#a6c3c5, #f1d09b);
   min-height: 100vh;
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
