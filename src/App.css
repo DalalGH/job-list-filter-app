@@ -35,7 +35,6 @@ input {
   margin-bottom: 0;  /* Remove bottom margin to avoid double space */
   font-size: 16px;
   border-radius: 6px;
-  border: 1px solid #ccc;
 }
 
 .job-list {
